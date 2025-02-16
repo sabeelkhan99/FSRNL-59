@@ -1,0 +1,2 @@
+1. Read about Inheritance : https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade/Inheritance
+2. Read and Practice about git and github
