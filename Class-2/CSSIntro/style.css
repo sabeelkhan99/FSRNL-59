@@ -1,0 +1,78 @@
+/* Element Selector */
+ul{
+    /* background-color: palevioletred; */
+    border: 3px solid black;
+}
+
+/* Unversal Selector */
+*{
+    border: 1px solid gray;
+}
+
+
+/* Id Selector */
+#heading-3{
+    color: purple;
+}
+
+
+/* Class Selector */
+.fav-movie{
+    font-weight: bold;
+    color: white;
+}
+
+/* Attribute Selector */
+input[type="text"]{
+    background-color: palegreen;
+}
+
+a[href="http://wikipedia.org"]{
+    color: lightseagreen;
+    font-size: 20px;
+}
+
+/* Decendent Selector */
+
+div article{
+    background-color: lightpink;
+}
+
+/* Adjacent Selector */
+h4+section{
+    text-decoration: overline;
+    background-color: palegoldenrod;
+}
+
+/*  Pseudo Class & Tree Structural Pseudo Classes  */
+
+button:hover{
+    background-color: aqua;
+    cursor: pointer;
+}
+
+a:visited{
+    color: orange;
+}
+
+ul li:first-child{
+    color: red;
+    font-size: 30px;
+}
+
+ul li:last-child{
+    color: brown;
+    font-size: 30px;
+}
+
+/* ol li:nth-of-type(2n+3){
+    color: green;
+} */
+
+/* ol li:nth-of-type(even){
+    color: green;
+} */
+
+/* ol li:nth-of-type(odd){
+    color: green;
+} */
