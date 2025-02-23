@@ -1,0 +1,13 @@
+
+figure{
+    width: 400px;
+    padding: 1rem;
+    height: 430px;
+    border: 2px solid black;
+}
+
+figure img{
+    width: 100%;
+    border-radius: 1rem;
+    height: 60%
+}

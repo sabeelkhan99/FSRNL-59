@@ -1,0 +1,8 @@
+1. Read about
+    - sticky positions
+    - background & border properties
+    - transations
+    - transform
+    - Animations
+
+2. Create a zomato like card : https://www.zomato.com/ncr/sector-18-noida-restaurants
