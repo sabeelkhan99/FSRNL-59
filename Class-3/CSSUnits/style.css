@@ -1,0 +1,38 @@
+section{
+    font-size: 10px;
+}
+
+html{
+    font-size: 16px;
+}
+
+/* em works with respect to the parent element */
+/* li{
+    font-size: 2em;
+} */
+
+li{
+    font-size: 0.5em;
+}
+
+section:nth-of-type(1){
+    border: 3px solid black;
+    background-color: lightcoral;
+    height: 200px;
+}
+
+section:nth-of-type(1) div{
+    border: 2px solid black;
+    background-color: lightskyblue;
+    height: 60%;
+    width: 30%;
+}
+
+article{
+    border: 2px solid black;
+    height: 40vh;
+    width: 60vw;
+    background-color: lightseagreen;
+}
+
+
