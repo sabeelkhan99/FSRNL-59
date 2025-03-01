@@ -1,0 +1,43 @@
+section{
+    border: 2px solid black;
+    padding: 1rem;
+    margin: 30px auto;
+    width: 80vw;
+}
+
+section h2{
+    font-size: 6rem;
+    text-align: center;
+}
+
+@media screen and (width<=890px){
+    section h2{
+        font-size: 4rem;
+        color: orange;
+    }
+}
+
+@media screen and (width<=590px){
+    section h2{
+        font-size: 3rem;
+        color: purple;
+    }
+}
+
+
+
+@media screen and (width<=450px){
+    section h2{
+        font-size: 2rem;
+        color: aqua;
+    }
+}
+
+
+@media screen and (orientation: portrait){
+    section p{
+        color: orange;
+        text-decoration: underline;
+    }
+}
+

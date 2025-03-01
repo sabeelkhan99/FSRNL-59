@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif; 
+    font-optical-sizing: auto;
+    font-style: normal; 
+}
+
+header{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    width: 400px;
+    justify-content: space-around;
+}
+
+#hero-section{
+    background-image: url('./assets/img/main.jpg');
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#hero-section div{
+    opacity: 0;
+    animation-name: fillIn;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.55, 0, 1, 0.45);;
+}
+
+#hero-section div h1{
+    color: white;
+    font-size: 3.5rem;
+}
+#hero-section  div h2{
+    color: white;
+    margin: 1.5rem 0px;
+    font-size: 2.0rem;
+}
+
+#hero-section  div button{
+    font-size: 1.5rem;
+    color: white;
+    background-color: #005f73;
+    border: none;
+    text-transform: uppercase;
+    padding: 0.8rem 2rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#brand-name{
+    font-weight: 900;
+}
+
+#destination-section{
+    width: 90vw;
+    margin: 3rem auto;
+    text-align: center;
+}
+
+
+#destination-section hr{
+    width: 500px;
+    height: 0.7rem;
+    background-color: #005f73;
+    margin: 1rem auto;
+    border: none;
+}
+
+#destination-grid{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#destination-grid img{
+    box-sizing: border-box;
+    width: 200px;
+    padding: 10px;
+    height: 350px;
+}
+
+.small{
+    flex-basis: 30%;
+}
+
+.large{
+    flex-basis: 70%;
+}
+
+@media screen and (width<=990px) {
+    .small,.large{
+        flex-basis: 50%;
+    }
+}
+
+@media screen and (width<=600px) {
+    .small,.large{
+        flex-basis: 100%;
+    }
+}
+
+@keyframes fillIn{
+    100%{
+        opacity: 1;
+    }
+}

@@ -1,0 +1,4 @@
+1. https://easings.net
+2. https://fonts.google.com
+3. https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+4. https://css-tricks.com/examples/hrs/
