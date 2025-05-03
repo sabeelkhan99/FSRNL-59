@@ -2,7 +2,6 @@ import { Fragment, useEffect, useState } from 'react'
 import ProductList from '../components/ProductList/ProductList';
 import Banner from '../components/Banner/Banner';
 import { Box } from '@mui/material';
-import Navbar from '../components/Navbar/NavBar';
 
 const AllProducts = () => {
 
