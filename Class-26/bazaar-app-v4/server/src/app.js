@@ -1,0 +1,17 @@
+import express from 'express';
+const app = express();
+import cors from 'cors';
+
+// Routes
+import productRoutes from './routes/product.js';
+import reviewRoutes from './routes/review.js';
+
+app.use(cors({
+    origin: ['http://localhost:5173'],
+    methods: ['GET', 'POST', 'PATCH', 'DELETE']
+}));
+app.use(express.json());
+app.use("/api/v1/products", productRoutes);
+app.use("/api/v1/products/review", reviewRoutes);
+
+export default app;
