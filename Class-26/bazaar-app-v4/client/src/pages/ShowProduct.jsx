@@ -11,6 +11,7 @@ import Grid from '@mui/material/Grid';
 import { Box } from '@mui/material';
 import Rating from '@mui/material/Rating';
 import TextField from '@mui/material/TextField';
+import Review from '../components/Review/Review';
 
 const ShowProduct = () => {
     const { productId } = useParams();
@@ -18,17 +19,33 @@ const ShowProduct = () => {
     const [rating, setRating] = useState(0);
     const [review, setReview] = useState("");
 
-    useEffect(() => {
-        axios.get(`http://localhost:1234/api/v1/products/${productId}`)
-            .then((res) => setProduct(res.data))
+    function fetchProduct() {
+          axios.get(`http://localhost:1234/api/v1/products/${productId}`)
+              .then((res) => setProduct({ ...res.data }))
             .catch((err) => console.log(err));
-    }, [])
+    }
 
+    useEffect(() => {
+        fetchProduct();
+    }, [])
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(rating, review);
+        if (!(rating || review)) {
+            return;
+        }
+        // create review api call.
+        axios.post(`http://localhost:1234/api/v1/products/${productId}/reviews`, { rating, review })
+            .then((res) => {
+                fetchProduct();
+            })
+            .catch((err) => console.log(err));
+        
+        // Reset the inputs.
+        setRating(() => 0);
+        setReview(() => "");
     };
+
     return (
         <Box px={10} mt={10}>
             <Grid container spacing={2}>
@@ -71,6 +88,14 @@ const ShowProduct = () => {
                             onChange={(e) => setReview(e.target.value)}
                         />
                         <Button type="submit" variant="contained">Submit</Button>
+                    </Box>
+                    <Box mt={5}>
+                        {
+                            product && product.reviews.length ? 
+                                product.reviews.map((item, idx) => {
+                                    return <Review key={idx} rating={item.rating} review={ item.review} />
+                                }): <p>No reviews yet!</p>
+                        }
                     </Box>
                 </Grid>
             </Grid>

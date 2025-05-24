@@ -12,6 +12,14 @@ app.use(cors({
 }));
 app.use(express.json());
 app.use("/api/v1/products", productRoutes);
-app.use("/api/v1/products/review", reviewRoutes);
+app.use("/api/v1/products", reviewRoutes);
+
+// app.all('*', (req, res, next) => next(new NotFoundError()));
+
+// Global Exception handler
+app.use((err, req, res, next) => {
+    const { message = 'Something went wrong', status = 500 } = err;
+    res.status(status).json({ message });
+});
 
 export default app;

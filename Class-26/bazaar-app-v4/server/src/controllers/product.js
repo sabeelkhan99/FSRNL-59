@@ -14,7 +14,7 @@ export const createProduct = async (req, res) => {
 
 export const getSingleProduct = async(req, res) => {
     const { productId } = req.params;
-    const product = await Product.findById(productId);
+    const product = await Product.findById(productId).populate('reviews'); //https://mongoosejs.com/docs/populate.html
     if (!product) {
         throw new Error(`Product with id ${productId} doesn't exist`);
     }

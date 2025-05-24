@@ -1,0 +1,13 @@
+export class BadRequestError extends Error{
+    constructor(message='Bad Request error') {
+        super(message);
+        this.status = 400;
+    }
+}
+
+export class NotFoundError extends Error{
+    constructor(message='Not found error') {
+        super(message);
+        this.status = 404;
+    }
+}
